@@ -22,7 +22,7 @@ class SittersController < ApplicationController
 	def show
 		@sitter = Sitter.find_by(id: params[:id])
 		if @sitter == current_sitter
-			
+			@jobs = @sitter.jobs
 
 		else
 			#add flash message to log in

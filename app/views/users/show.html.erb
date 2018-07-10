@@ -1,0 +1,10 @@
+<h1>Hello, <%= @user.name %></h1>
+
+<h2>Your Jobs</h2>
+
+<%= @jobs.each do |job| %>
+	<li><%= job.sitter.name %></li><br>
+	<li><%= job.start_date_time %></li><br>
+	<li><%= job.end_date_time %></li><br>
+	<li><%= job.sitter.payment %></li><br><br>
+<% end %>
