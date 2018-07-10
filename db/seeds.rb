@@ -15,8 +15,8 @@ Sitter.create(name: "Neo", email: "the@one.com", password: "morpheus", hourly_ra
 
 # Jobs
 
-Job.create(address: "123 Main St., Seattle, WA", user_phone: "206-123-4567", sitter_phone: "206-987-6543", start_date_time: 2018-01-31 [19:00:00], end_date_time: 2018-01-31 [22:00:00], user_id: 1, sitter_id: 2)
-Job.create(address: "2020 Plaza, SF, CA", user_phone: "206-123-4567", sitter_phone: "415-987-6543", start_date_time: 2018-02-14 [20:00:00], end_date_time: 2018-01-31 [23:00:00], user_id: 2, sitter_id: 2)
-Job.create(address: "100 Sunset Blvd. Los Angeles, CA", user_phone: "310-123-4567", sitter_phone: "310-987-6543", start_date_time: 2018-03-14 [10:00:00], end_date_time: 2018-03-15 [10:00:00], user_id: 3, sitter_id: 1)
-Job.create(address: "100 Presidio", user_phone: "415-555-5555", sitter_phone: "415-999-9999", start_date_time: 2018-04-04 [14:30:00], end_date_time: 2018-01-31 [20:30:00], user_id: 4, sitter_id: 4)
-Job.create(address: "100 Presidio", user_phone: "415-555-5555", sitter_phone: "415-999-9999", start_date_time: 2018-05-30 [11:00:00], end_date_time: 2018-05-30 [22:00:00], user_id: 4, sitter_id: 3)
+Job.create(address: "123 Main St., Seattle, WA", user_phone: "206-123-4567", sitter_phone: "206-987-6543", start_date_time: DateTime.strptime("09/14/2017 20:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("09/14/2017 22:00", "%m/%d/%Y %H:%M"), user_id: 1, sitter_id: 2)
+Job.create(address: "2020 Plaza, SF, CA", user_phone: "206-123-4567", sitter_phone: "415-987-6543", start_date_time: DateTime.strptime("02/14/2018 17:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("02/14/2018 22:00", "%m/%d/%Y %H:%M"), user_id: 2, sitter_id: 2)
+Job.create(address: "100 Sunset Blvd. Los Angeles, CA", user_phone: "310-123-4567", sitter_phone: "310-987-6543", start_date_time: DateTime.strptime("03/14/2018 10:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("03/14/2018 22:00", "%m/%d/%Y %H:%M"), user_id: 3, sitter_id: 1)
+Job.create(address: "100 Presidio", user_phone: "415-555-5555", sitter_phone: "415-999-9999", start_date_time: DateTime.strptime("04/04/2018 14:30", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("04/04/2018 22:30", "%m/%d/%Y %H:%M"), user_id: 4, sitter_id: 4)
+Job.create(address: "100 Presidio", user_phone: "415-555-5555", sitter_phone: "415-999-9999", start_date_time: DateTime.strptime("05/30/2018 07:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("05/30/2018 17:00", "%m/%d/%Y %H:%M"), user_id: 4, sitter_id: 3)
