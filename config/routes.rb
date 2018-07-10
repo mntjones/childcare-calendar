@@ -5,9 +5,12 @@ Rails.application.routes.draw do
   resources :sitters
   
 
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  get "/logout", to: "sessions#destroy"
+  get "/users_login", to: "sessions#user_new"
+  post "/users_login", to: "sessions#user_create"
+  get "/users_logout", to: "sessions#user_destroy"
 
+ 	get "/sitters_login", to: "sessions#sitter_new"
+  post "/sitters_login", to: "sessions#sitter_create"
+  get "/sitters_logout", to: "sessions#sitter_destroy"
   root to: "application#home"
 end
