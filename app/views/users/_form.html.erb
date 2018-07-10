@@ -1,7 +1,15 @@
-<%= form_for @user %>
-
-
-
-
-
+<%= form_for @user do |f| %>
+	<%= f.label :name, "Enter Name" %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :email, "Enter Email" %>
+	<%= f.text_field :email %>
+	<br>
+	<%= f.label :password, "Enter Password" %>
+	<%= f.password_field :password %>
+	<br>
+	<%= f.label :num_of_kids, "How many kids do you need care for?" %>
+	<%= f.number_field :num_of_kids %>
+	<br>
+	<%= f.submit %>
 <% end %>
