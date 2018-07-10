@@ -7,6 +7,8 @@ class CreateJobs < ActiveRecord::Migration[5.2]
       t.string :sitter_phone
       t.datetime :start_date_time
       t.datetime :end_date_time
+      t.integer :user_id
+      t.integer :sitter_id
 
     end
   end
