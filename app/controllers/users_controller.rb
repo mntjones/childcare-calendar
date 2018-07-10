@@ -23,7 +23,8 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find_by(id: params[:id])
 		if @user == current_user
-			@message = "At Home - no restaurants yet."
+			
+
 		else
 			#add flash message to log in
 			redirect_to root_path
@@ -40,5 +41,13 @@ class UsersController < ApplicationController
 	def user_params
 		params.require(:user).permit(:name, :email, :password, :num_of_kids)
 	end
+
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
+
+  def logged_in?
+    redirect_to root_path unless current_user
+  end
 
 end
