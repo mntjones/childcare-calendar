@@ -1,2 +1,44 @@
 class UsersController < ApplicationController
+
+	def index
+		@users = User.all
+		@user = current_user
+	end
+
+	def new
+		@user = User.new
+	end
+
+	def create
+		@user = User.create(user_params)
+		if @user 
+			session[:user_id] = @user.id
+    	redirect_to user_path(@user)
+    else
+    	# add flash message to complete form
+    	redirect_to(controller: 'users', action: 'new')
+    end
+	end
+
+	def show
+		@user = User.find_by(id: params[:id])
+		if @user == current_user
+			@message = "At Home - no restaurants yet."
+		else
+			#add flash message to log in
+			redirect_to root_path
+		end
+	end
+
+	def destroy
+		session.delete :user_id
+    redirect_to(controller: 'application', action: 'home')
+	end
+
+	private 
+
+	def user_params
+		params.require(:user).permit(:name, :email, :password, :num_of_kids)
+	end
+
 end
