@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sitters
-  
+  resources :jobs
 
   get "/users_login", to: "sessions#user_new"
   post "/users_login", to: "sessions#user_create"
