@@ -1,0 +1,15 @@
+<%= form_for @sitter do |f| %>
+	<%= f.label :name, "Enter Name" %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :email, "Enter Email" %>
+	<%= f.text_field :email %>
+	<br>
+	<%= f.label :password, "Enter Password" %>
+	<%= f.password_field :password %>
+	<br>
+	<%= f.label :hourly_rate, "Hourly rate?" %>
+	<%= f.number_field :hourly_rate %>
+	<br>
+	<%= f.submit %>
+<% end %>
