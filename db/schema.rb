@@ -10,12 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_235735) do
+ActiveRecord::Schema.define(version: 2018_07_11_021029) do
 
   create_table "jobs", force: :cascade do |t|
-    t.string "address"
-    t.string "user_phone"
-    t.string "sitter_phone"
     t.datetime "start_date_time"
     t.datetime "end_date_time"
     t.integer "user_id"
@@ -27,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_235735) do
     t.string "email"
     t.string "password_digest"
     t.integer "hourly_rate"
+    t.string "sitter_phone"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,6 +32,8 @@ ActiveRecord::Schema.define(version: 2018_07_09_235735) do
     t.string "email"
     t.string "password_digest"
     t.integer "num_of_kids"
+    t.string "user_phone"
+    t.string "address"
   end
 
 end
