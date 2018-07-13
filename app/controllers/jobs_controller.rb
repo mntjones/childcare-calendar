@@ -33,4 +33,19 @@ class JobsController < ApplicationController
 		
 	end
 
+	def show
+		@job = Job.find_by(id: params[:id])
+		@user = User.find_by(id: @job.user.id)
+		@sitter = current_sitter
+	end
+
+	def update
+		@job = Job.find_by(id: params[:id])
+		@job.sitter_id = current_sitter.id
+		@job.open_jobs = false
+		@job.save
+		redirect_to sitter_path(current_sitter)
+	end
+
+
 end

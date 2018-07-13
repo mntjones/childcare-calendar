@@ -1,1 +1,14 @@
 <h1>Open Job</h1>
+
+<p>Parent/Gaurdian: <%= @job.user.name %></p>
+<p>Start Date and Time: <%= @job.start_date_time %></p>
+<p>End Date and Time: <%= @job.end_date_time %></p>
+<p>Address: <%= @job.user.address %></p>
+<p>Your Payment: <%= @job.payment %></p><br><br>
+
+<%= form_for @job do |f| %>
+  <%= hidden_field_tag 'job[user_id]', @user.id%>
+  <%= hidden_field_tag 'job[sitter_id]', @sitter.id%>
+
+  <%= f.submit "Accept this Job" %>
+<% end %>
