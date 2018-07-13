@@ -3,7 +3,7 @@
 <h2>Open Jobs</h2>
 
 <% @open_jobs.each do |job| %>
-	<p>Parent/Gaurdian: <%= job.user.name %></p
+	<p>Parent/Gaurdian: <%= link_to job.user.name, job_path(job) %></p
 	<p>State Date and Time: <%= job.start_date_time %></p>
 	<p>End Date and Time: <%= job.end_date_time %></p>
 	<p>Address: <%= job.user.address %></p>
