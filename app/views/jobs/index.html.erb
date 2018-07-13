@@ -2,12 +2,13 @@
 
 <h2>Open Jobs</h2>
 
+<% @open_jobs.each do |job| %>
+	<p>Parent/Gaurdian: <%= job.user.name %></p
+	<p>State Date and Time: <%= job.start_date_time %></p>
+	<p>End Date and Time: <%= job.end_date_time %></p>
+	<p>Address: <%= job.user.address %></p>
+	<p>Your Payment: <%= job.payment %></p><br><br>
+<% end %>
 
 
-
-<h2>Claimed Jobs - by Caregiver</h2>
-
-<h2>Claimed Jobs - by Parent/Gaurdian</h2>
-
-
-<%= link_to "Home", root_path%>
+<%= link_to "Sitter Home Page", sitter_path(@sitter) %>

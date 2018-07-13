@@ -15,8 +15,8 @@ Sitter.create(name: "Neo", email: "the@one.com", password: "morpheus", sitter_ph
 
 # Jobs
 
-Job.create(start_date_time: DateTime.strptime("09/14/2017 20:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("09/14/2017 22:00", "%m/%d/%Y %H:%M"), user_id: 1, sitter_id: 2)
-Job.create(start_date_time: DateTime.strptime("02/14/2018 17:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("02/14/2018 22:00", "%m/%d/%Y %H:%M"), user_id: 2, sitter_id: 2)
-Job.create(start_date_time: DateTime.strptime("03/14/2018 10:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("03/14/2018 22:00", "%m/%d/%Y %H:%M"), user_id: 3, sitter_id: 1)
-Job.create(start_date_time: DateTime.strptime("04/04/2018 14:30", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("04/04/2018 22:30", "%m/%d/%Y %H:%M"), user_id: 4, sitter_id: 4)
-Job.create(start_date_time: DateTime.strptime("05/30/2018 07:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("05/30/2018 17:00", "%m/%d/%Y %H:%M"), user_id: 4, sitter_id: 3)
+Job.create(start_date_time: DateTime.strptime("09/14/2017 20:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("09/14/2017 22:00", "%m/%d/%Y %H:%M"), user_id: 1, sitter_id: 2, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("02/14/2018 17:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("02/14/2018 22:00", "%m/%d/%Y %H:%M"), user_id: 2, sitter_id: 2, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("03/14/2018 10:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("03/14/2018 22:00", "%m/%d/%Y %H:%M"), user_id: 3, sitter_id: 1, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("04/04/2018 14:30", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("04/04/2018 22:30", "%m/%d/%Y %H:%M"), user_id: 4, sitter_id: 4, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("05/30/2018 07:00", "%m/%d/%Y %H:%M"), end_date_time: DateTime.strptime("05/30/2018 17:00", "%m/%d/%Y %H:%M"), user_id: 4, sitter_id: 3, open_jobs: false)

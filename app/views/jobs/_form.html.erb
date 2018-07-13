@@ -1,21 +1,10 @@
 <%= form_for @job do |f| %>
-	<%= f.label :name, "Enter Name" %>
-	<%= f.text_field :name %>
+	<%= f.label :start_date_time, "Enter Start Time: MM/DD/YYYY HH:MM " %>
+	<%= f.text_field :start_date_time %>
 	<br>
-	<%= f.label :email, "Enter Email" %>
-	<%= f.text_field :email %>
+	<%= f.label :end_date_time, "Enter End Time: MM/DD/YYYY HH:MM" %>
+	<%= f.text_field :end_date_time %>
 	<br>
-	<%= f.label :password, "Enter Password" %>
-	<%= f.password_field :password %>
-	<br>
-	<%= f.label :num_of_kids, "How many kids do you need care for?" %>
-	<%= f.number_field :num_of_kids %>
-	<br>
-	<%= f.label :address, "Enter Address" %>
-	<%= f.text_field :address %>
-	<br>
-	<%= f.label :user_phone, "Enter Phone Number" %>
-	<%= f.text_field :user_phone %>
-	<br>
+
 	<%= f.submit %>
 <% end %>

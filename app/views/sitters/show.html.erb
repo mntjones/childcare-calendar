@@ -3,11 +3,12 @@
 <h2>Your Jobs</h2>
 
 <% @sitter.jobs.each do |job| %>
-
-	<li>Parent/Guardian: <%= job.user.name %></li><br>
-	Job Start: <%= job.start_date_time %><br>
-	Job End: <%= job.end_date_time %><br>
-	Total Payment: <%= job.payment %><br><br>
+	<% if job.open_jobs == false %>
+		<li>Parent/Guardian: <%= job.user.name %></li><br>
+		Job Start: <%= job.start_date_time %><br>
+		Job End: <%= job.end_date_time %><br>
+		Total Payment: <%= job.payment %><br><br>
+	<% end %>	
 <% end %>
 
 <%= link_to 'See Jobs Page', jobs_path %><br>
