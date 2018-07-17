@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :users
-  resources :sitters
-  resources :jobs
+  resources :users do 
+    resources :jobs
+  end
+
+  resources :sitters do
+    resources :jobs, only: [:show]
+  end
+  
 
   get "/users_login", to: "sessions#user_new"
   post "/users_login", to: "sessions#user_create"

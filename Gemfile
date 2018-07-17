@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
+gem 'validates_timeliness', '~> 5.0.0.alpha2'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

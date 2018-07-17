@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_13_144427) do
+ActiveRecord::Schema.define(version: 2018_07_17_160023) do
 
   create_table "jobs", force: :cascade do |t|
     t.datetime "start_date_time"
-    t.datetime "end_date_time"
     t.integer "user_id"
     t.integer "sitter_id"
     t.boolean "open_jobs", default: true
+    t.integer "duration"
   end
 
   create_table "sitters", force: :cascade do |t|
