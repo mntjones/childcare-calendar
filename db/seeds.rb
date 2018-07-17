@@ -15,8 +15,8 @@ Sitter.create(name: "Neo", email: "the@one.com", password: "morpheus", sitter_ph
 
 # Jobs
 
-Job.create(start_date_time: DateTime.strptime("09/14/2017 20:00", "%m/%d/%Y %H:%M"), duration: 90, user_id: 1, sitter_id: 2, open_jobs: false)
-Job.create(start_date_time: DateTime.strptime("02/14/2018 17:00", "%m/%d/%Y %H:%M"), duration: 180, user_id: 2, sitter_id: 2, open_jobs: false)
-Job.create(start_date_time: DateTime.strptime("03/14/2018 10:00", "%m/%d/%Y %H:%M"), duration: 360, user_id: 3, sitter_id: 1, open_jobs: false)
-Job.create(start_date_time: DateTime.strptime("04/04/2018 14:30", "%m/%d/%Y %H:%M"), duration: 540, user_id: 4, sitter_id: 4, open_jobs: false)
-Job.create(start_date_time: DateTime.strptime("05/30/2018 07:00", "%m/%d/%Y %H:%M"), duration: 120, user_id: 4, sitter_id: 3, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("09/14/2017 20:00", "%m/%d/%Y %H:%M"), duration: 1.5, user_id: 1, sitter_id: 2, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("02/14/2018 17:00", "%m/%d/%Y %H:%M"), duration: 3, user_id: 2, sitter_id: 2, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("03/14/2018 10:00", "%m/%d/%Y %H:%M"), duration: 6, user_id: 3, sitter_id: 1, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("04/04/2018 14:30", "%m/%d/%Y %H:%M"), duration: 12, user_id: 4, sitter_id: 4, open_jobs: false)
+Job.create(start_date_time: DateTime.strptime("05/30/2018 07:00", "%m/%d/%Y %H:%M"), duration: 2, user_id: 4, sitter_id: 3, open_jobs: false)

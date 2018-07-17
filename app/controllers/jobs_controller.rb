@@ -26,11 +26,11 @@ class JobsController < ApplicationController
 		@job.sitter_id = "1"
 
 		if @job.save
-			# error message
+			
 			redirect_to user_path(current_user)
 		else
-
-			redirect_to new_job_path
+			
+			redirect_to new_user_job_path
 		end
 		
 	end
@@ -55,7 +55,7 @@ class JobsController < ApplicationController
 	end
 
 	def destroy
-		
+
 	end
 
 
