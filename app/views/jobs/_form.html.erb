@@ -1,4 +1,4 @@
-<%= form_for @job do |f| %>
+<%= form_for [@user, @job] do |f| %>
 	<%= f.label :start_date_time, "Enter Start Time: MM/DD/YYYY HH:MM " %>
 	<%= f.text_field :start_date_time %>
 	<br>

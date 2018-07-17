@@ -6,10 +6,10 @@
 	<% if job.open_jobs == false %>
 		<li>Parent/Guardian: <%= job.user.name %></li><br>
 		Job Start: <%= job.start_date_time %><br>
-		Job End: <%= job.end_date_time %><br>
+		Job Duration: <%= job.duration %><br>
 		Total Payment: <%= job.payment %><br><br>
 	<% end %>	
 <% end %>
 
-<%= link_to 'See Jobs Page', jobs_path %><br>
+<%= link_to 'See Jobs Page', sitter_jobs_path(@sitter) %><br>
 <%= link_to 'Log Out', sitter_path, method: "delete" %>

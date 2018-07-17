@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :sitters do
-    resources :jobs, only: [:show]
+    resources :jobs
   end
   
 
