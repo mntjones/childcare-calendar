@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/users_login", to: "sessions#user_new"
   post "/users_login", to: "sessions#user_create"
   get "/users_logout", to: "sessions#user_destroy"
+  get '/auth/facebook/callback' => 'sessions#user_create'
 
  	get "/sitters_login", to: "sessions#sitter_new"
   post "/sitters_login", to: "sessions#sitter_create"
